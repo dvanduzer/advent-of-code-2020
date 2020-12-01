@@ -27,6 +27,13 @@ expenses = [
 1456,
 ]
 
+with open('input_day1') as f:
+    expenses = f.readlines()
+
+expenses = [int(x.strip()) for x in expenses]
+
+#print(expenses)
+
 for (a,b) in itertools.combinations(expenses, 2):
     if (a+b) == 2020:
         print(a*b)
